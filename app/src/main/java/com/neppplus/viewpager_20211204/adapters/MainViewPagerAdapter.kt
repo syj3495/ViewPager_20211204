@@ -11,14 +11,14 @@ class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getPageTitle(position: Int): CharSequence? {
 
-        if(position ==0){
-            return "이름"
-        }else if (position == 1){
-            return "거주지"
-        }else{
+    return when(position){
 
-            return "나이"
-        }
+         0 -> "이름"
+        1-> "거주지"
+        else->"나이"
+
+
+    }
 
     }
 
@@ -46,7 +46,6 @@ class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             0 -> NameFragment()
             1 -> AddressFragment()
             else -> AgeFragment()
-
 
         }
 
