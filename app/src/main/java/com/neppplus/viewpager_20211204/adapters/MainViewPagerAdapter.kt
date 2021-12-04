@@ -20,7 +20,6 @@ class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             return "나이"
         }
 
-
     }
 
     override fun getCount(): Int {
